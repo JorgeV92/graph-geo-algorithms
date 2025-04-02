@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Breadth-First Search - Graph & Geometry Algorithms</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="sidebar">
+        <h2>Graph & Geometry</h2>
+        <ul>
+          <li><a href="/graph/bfs.html">Breadth-First Search</a></li>
+          <li><a href="/graph/dijkstra.html">Dijkstra</a></li>
+          <li><a href="/geometry/convex-hull.html">Convex Hull</a></li>
+          <li><a href="/geometry/closest-pair.html">Closest Pair</a></li>
+        </ul>
+        <input type="text" id="searchBox" placeholder="Search..." />
+      </aside>
+      <main class="content">
+        <h1 id="breadth-first-search-bfs">Breadth-First Search (BFS)</h1>
+
+<!-- your content here... -->
+
+<p>Breadth-First Search is a graph traversal algorithm used to explore all vertices reachable from a given starting node.</p>
+
+<h3 id="-time-complexity">📈 Time Complexity</h3>
+<ul>
+  <li>O(V + E)</li>
+</ul>
+
+<h3 id="-description">🧠 Description</h3>
+<p>BFS uses a queue to explore nodes level by level.</p>
+
+<h3 id="-code-c">💻 Code (C++)</h3>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">bfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">start</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">adj</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;&amp;</span> <span class="n">visited</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">q</span><span class="p">;</span>
+    <span class="n">visited</span><span class="p">[</span><span class="n">start</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">start</span><span class="p">);</span>
+    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">u</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">();</span> <span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">v</span> <span class="o">:</span> <span class="n">adj</span><span class="p">[</span><span class="n">u</span><span class="p">])</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">visited</span><span class="p">[</span><span class="n">v</span><span class="p">])</span> <span class="p">{</span>
+                <span class="n">visited</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+                <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="-example">✅ Example</h3>
+<p>Try BFS from node 0 in a connected graph.</p>
+
+      </main>
+    </div>
+    <script src="/assets/search.js"></script>
+  </body>
+</html>

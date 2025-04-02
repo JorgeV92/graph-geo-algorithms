@@ -1,4 +1,12 @@
+---
+layout: default
+title: Breadth-First Search
+---
+
 # Breadth-First Search (BFS)
+
+<!-- your content here... -->
+
 
 Breadth-First Search is a graph traversal algorithm used to explore all vertices reachable from a given starting node.
 
