@@ -3,9 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body>
-    <h1>{{ page.title }}</h1>
-    {{ content }}
+    <div class="wrapper">
+      <aside class="sidebar">
+        <h2>Graph & Geometry</h2>
+        <ul>
+          <li><a href="/graph/bfs.html">Breadth-First Search</a></li>
+          <li><a href="/graph/dijkstra.html">Dijkstra</a></li>
+          <li><a href="/geometry/convex-hull.html">Convex Hull</a></li>
+          <li><a href="/geometry/closest-pair.html">Closest Pair</a></li>
+        </ul>
+        <input type="text" id="searchBox" placeholder="Search..." />
+      </aside>
+      <main class="content">
+        {{ content }}
+      </main>
+    </div>
+    <script src="/assets/search.js"></script>
   </body>
 </html>
