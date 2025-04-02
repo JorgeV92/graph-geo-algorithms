@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Graph & Geometry Algorithms
 ---
 
 # Welcome to Graph & Geometry Algorithms
